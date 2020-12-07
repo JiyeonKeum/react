@@ -13,11 +13,16 @@ module.exports = {
                         presets: ["@babel/preset-env"]
                     }
                 }
+            },
+            {
+                test: /\.(css)$/,
+                exclude: /node_modules/,
+                use: ['style-loader', 'css-loader']
             }
         ]
     },
     resolve: {
-        extensions: ["*", "js"]
+        extensions: ["*", ".js"]
     },
     output: {
         path: __dirname + "/dist",
